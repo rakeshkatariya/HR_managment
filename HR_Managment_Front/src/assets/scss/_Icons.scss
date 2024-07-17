@@ -1,0 +1,197 @@
+@font-face {
+    font-family: 'icomoon';
+    src:  url('../icons/icomoon.eot?hmj7i5');
+    src:  url('../icons/icomoon.eot?hmj7i5#iefix') format('embedded-opentype'),
+      url('../icons/icomoon.ttf?hmj7i5') format('truetype'),
+      url('../icons/icomoon.woff?hmj7i5') format('woff'),
+      url('../icons/icomoon.svg?hmj7i5#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  }
+  
+  [class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+  
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  .icon-editImage:before {
+    content: "\e922";
+  }
+  
+  .icon-local-seam:before {
+    content: "\e92b";
+  }
+  .icon-user-interval:before {
+    content: "\e92c";
+  }
+  .icon-projects:before {
+    content: "\e92d";
+  }
+  .icon-back-arrow:before {
+    content: "\e910";
+  }
+  .icon-edit-profile:before {
+    content: "\e924";
+  }
+  .icon-change-password:before {
+    content: "\e925";
+  }
+  .icon-logout:before {
+    content: "\e926";
+  }
+  .icon-types:before {
+    content: "\e927";
+  }
+  .icon-white-theme:before {
+    content: "\e928";
+  }
+  .icon-dark-theme:before {
+    content: "\e929";
+  }
+  .icon-sidebar-menu:before {
+    content: "\e92a";
+  }
+  .icon-global-seam:before {
+    content: "\e917";
+  }
+  .icon-hole-type:before {
+    content: "\e918";
+  }
+  .icon-horiz-survey:before {
+    content: "\e919";
+  }
+  .icon-laboratories:before {
+    content: "\e91a";
+  }
+  .icon-lithology:before {
+    content: "\e91b";
+  }
+  .icon-log-type:before {
+    content: "\e91c";
+  }
+  .icon-masters:before {
+    content: "\e91d";
+  }
+  .icon-methods:before {
+    content: "\e91e";
+  }
+  .icon-seam-status:before {
+    content: "\e91f";
+  }
+  .icon-states:before {
+    content: "\e920";
+  }
+  .icon-structure:before {
+    content: "\e921";
+  }
+  .icon-usgs-quard:before {
+    content: "\e922";
+  }
+  .icon-verti-survey:before {
+    content: "\e923";
+  }
+  .icon-Codes:before {
+    content: "\e931";
+  }
+  .icon-companies:before {
+    content: "\e932";
+  }
+  .icon-coor-system:before {
+    content: "\e933";
+  }
+  .icon-counties:before {
+    content: "\e934";
+  }
+  .icon-notification:before {
+    content: "\e900";
+    color: #504973;
+  }
+  .icon-view:before {
+    content: "\e901";
+  }
+  .icon-delete:before {
+    content: "\e902";
+  }
+  .icon-chevron-down:before {
+    content: "\e903";
+  }
+  .icon-modal-close:before {
+    content: "\e904";
+  }
+  .icon-remove--user:before {
+    content: "\e905";
+  }
+  .icon-password-lock:before {
+    content: "\e906";
+  }
+  .icon-search:before {
+    content: "\e907";
+  }
+  .icon-Cancel:before {
+    content: "\e908";
+  }
+  .icon-alert-success:before {
+    content: "\e909";
+  }
+  .icon-alert-error:before {
+    content: "\e90a";
+  }
+  .icon-alert-warning:before {
+    content: "\e90b";
+  }
+  .icon-alert-info:before {
+    content: "\e90c";
+  }
+  .icon-validation-error:before {
+    content: "\e90d";
+  }
+  .icon-view-off:before {
+    content: "\e90e";
+  }
+  .icon-add:before {
+    content: "\e90f";
+  }
+  .icon-dashboard:before {
+    content: "\e911";
+  }
+  .icon-data-tables:before {
+    content: "\e912";
+  }
+  .icon-lock:before {
+    content: "\e913";
+  }
+  .icon-group:before {
+    content: "\e914";
+  }
+  .icon-user:before {
+    content: "\e915";
+  }
+  .icon-edit:before {
+    content: "\e916";
+  }
+  .icon-models:before {
+    content: "\e92e";
+  }
+  .icon-stratigraphicLogs:before {
+    content: "\e92f";
+  }
+  .icon-boundries:before {
+    content: "\e930";
+  }
+  .icon-prospect:before {
+    content: "\e935";
+  }
+  .icon-prospectLocation:before {
+    content: "\e936";
+  }

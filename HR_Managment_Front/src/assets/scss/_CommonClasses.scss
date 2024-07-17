@@ -1,0 +1,285 @@
+*{
+    font-family: 'Rubik', sans-serif;
+    // font-family: 'Lato', sans-serif;
+}
+
+::-webkit-scrollbar {
+    width: 7px;
+    height: 7px;
+}
+  
+  /* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #B3B1BD; 
+    border-radius: 25px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #504973; 
+}
+
+input, button, textarea{
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+button{
+    cursor: pointer !important;
+}
+
+.p-w-100{
+    width: 100% !important;
+}
+
+.p-h-100{
+    height: 100% !important;
+}
+
+.p-h-full{
+    height: 100vh !important;
+}
+
+.p-position-relative{
+    position: relative;
+}
+
+.p-absolute{
+    position: absolute;
+}
+
+.text-white{
+    color: $whiteColor !important;
+}
+
+.text-dark{
+    color: $darkTextColor;
+}
+
+.text-13{
+    font-size: 13px;
+}
+
+.text-14{
+    font-size: 14px;
+}
+
+.text-15{
+    font-size: 15px;
+}
+
+.text-16{
+    font-size: 16px;
+}
+
+.text-17{
+    font-size: 17px;
+}
+
+.text-18{
+    font-size: 18px;
+}
+
+.text-19{
+    font-size: 18px;
+}
+
+.text-20{
+    font-size: 20px;
+}
+
+.text-22{
+    font-size: 22px;
+}
+
+.text-24{
+    font-size: 24px;
+}
+
+.text-30{
+    font-size: 30px;
+}
+
+.cursor-pointer{
+    cursor: pointer !important;
+}
+
+.icon-dot{
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    border-radius: 50px;
+    top: 5px;
+    right: 4px;
+    background-color: $lightGreenColor;
+    border: 2px solid $whiteColor;
+}
+
+.p-formgroup{
+    label{
+        display: block;
+        color: $labelColor;
+        font-size: 13px;
+        margin-bottom: 8px;
+    }
+    span{
+        color: $darkTextColor;
+        font-size: 15px;
+    }
+}
+
+.error-msg-alert{
+    background-color: $dangerLightColor;
+    padding: 15px;
+    border-radius: 10px;
+    i{
+        font-size: 21px;
+    }
+    i, span{
+        color: $dangerColor
+    }
+}
+
+.green-text{
+    color: $lightGreenColor !important;
+}
+
+.red-text{
+    color: $dangerColor !important;
+}
+
+.form-container-area{
+    height: 100%;
+    overflow: auto;
+}
+
+.p-overflow-auto{
+    overflow: auto;
+}
+
+.form-header{
+    padding: 12px;
+    i, label{
+        font-size: 18px;
+        font-weight: 500;
+        color: $primaryColor;
+    }
+}
+
+.form-field-header{
+    padding: 8px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.header-input{
+    width: 160px;
+    margin-right: 8px;
+    margin-top: 0px;
+    .p-dropdown{
+        margin-top: 0px;
+        .p-dropdown-trigger{
+            width: 2rem;
+        }
+    } 
+    
+}
+
+.dialog-popup1 {
+    border-radius: 12px;
+    overflow: auto;
+    width: 25vw;
+  
+    @media only screen and (max-width: 576px) {
+        width: 90vw;
+      }
+      
+  
+    .p-dialog-header {
+      padding: 1.4rem;
+  
+      .p-dialog-title {
+        font-size: 18px;
+        font-weight: 500;
+        color: $lightTextColor;
+      }
+    }
+  
+    .p-dialog-content {
+      padding: 0 1.4rem 1.4rem !important;
+  
+      span {
+        font-weight: 400;
+        color: $lightTextColor;
+  
+        b {
+          font-weight: 500;
+        }
+      }
+    }
+  
+    .dialog-footer {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      margin-top: 2rem;
+  
+      .btn-dialog-delete,
+      .btn-dialog-submit {
+        margin-left: 8px;
+      }
+    }
+  }
+
+  .container-body{
+      height: calc(100% - 35px);
+      overflow: auto;
+  }
+
+//   .profile-img{
+//     width: 100%;
+//     height: 450px;
+//     img{
+//         border-radius: 8px;
+//         width: 100%;
+//         height: 100%;
+//         object-fit: cover;
+//     }
+//   }
+
+.profile-img {
+    width: 100%;
+    height: 450px;
+  }
+  
+  @media (max-width: 767px) {
+    .profile-img {
+      height: 330px;
+    }
+  }
+  
+  .profile-img img {
+    border-radius: 8px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  
+  .custom-select{
+    width: 225px;
+  }
+
+  .p-dialog-header{
+    border: none !important;
+  }
+  @media (min-width: 991px){
+    .p-w-md-auto{
+        width: auto !important;
+    }
+  }

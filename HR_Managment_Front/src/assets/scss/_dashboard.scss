@@ -1,0 +1,547 @@
+/* --------------- @Dashboard Area ---------------- */
+$mainDarkBlue: #03256c;
+$primaryWhite: #ffffff;
+
+.edit-profile-image {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.customize-card {
+  background: $primaryWhite !important;
+  margin-top: 10px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.edit-profile-editImage {
+  cursor: pointer;
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  background-color: #fff;
+  color: $mainDarkBlue;
+  border-radius: 50%;
+  height: 35px;
+  width: 35px;
+  padding: 5px;
+
+  i {
+    font-size: 16px;
+  }
+}
+
+.dashboard-container {
+  // background-color: $backgrounColor;
+  height: 100%;
+  overflow: auto;
+  // padding: 1rem;
+  display: flex;
+  .dashboard-box {
+    background: #b8e3f8;
+    border-radius: 20px;
+    padding: 15px;
+    // min-height: 150px;
+    .dashboard-icon {
+      font-size: 50px;
+      color: $primaryRed;
+    }
+    .dash-info {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      .count {
+        font-size: 50px;
+        color: $primaryRed;
+      }
+      .title {
+        color: $darkTextColor;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 28px;
+        text-align: right;
+      }
+    }
+  }
+
+  // .custom-table.p-datatable .p-datatable-wrapper{
+  //   height: auto !important;
+  // }
+}
+
+.dashboard-right-side {
+  &.large-dashboard-area {
+    // width: 100%;
+
+    .dashboard-header {
+      transition: 1s;
+      width: calc(100vw - 60px);
+    }
+
+    .dashboard-body {
+      transition: 1s;
+      // width: calc(100vw - 91px);
+    }
+  }
+}
+
+.card-title {
+  .header-title {
+    color: $lightTextColor;
+    font-size: 20px;
+    font-weight: 600;
+    display: block;
+  }
+
+  .path-name {
+    color: $lightTextColor;
+    font-size: 15px;
+    font-weight: 400;
+  }
+
+  .searchbar-area {
+    position: relative;
+
+    input {
+      padding: 0px 10px !important;
+      height: 35px;
+      border: none !important;
+      background-color: $lightBtnColor;
+      margin-right: 0px !important;
+      max-width: 220px;
+    }
+
+    .icon-search {
+      position: absolute;
+      right: 11px;
+      top: 5px;
+      font-size: 17px;
+    }
+  }
+}
+
+/* --------------- @Sidebar Area ---------------- */
+
+.sidebar-container {
+  width: 270px;
+  height: 100vh;
+  overflow: auto;
+  // padding-right: 1rem;
+  background-color: $primaryColor;
+  transition: 1s;
+
+  .info-icon {
+    display: none;
+  }
+
+  &.sidebar-mini {
+    width: 60px;
+    overflow: hidden;
+
+    .info-icon {
+      display: block;
+    }
+
+    .sidebar-footer-text {
+      display: none;
+      white-space: nowrap;
+    }
+
+    .sidebar-head {
+      &::after {
+        width: 0px;
+        transition: 1s;
+      }
+    }
+
+    &:hover {
+      width: 270px;
+
+      .info-icon {
+        display: none;
+      }
+
+      .sidebar-footer-text {
+        display: block;
+      }
+
+      & + .large-dashboard-area {
+        width: calc(100vw - 270px) !important;
+
+        .dashboard-header {
+          width: calc(100vw - 270px) !important;
+        }
+
+        .dashboard-body {
+          width: calc(100vw - 300px) !important;
+        }
+      }
+    }
+  }
+}
+
+.sidebar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 80px;
+  // background-color: $lighPrimaryColor;
+  padding: 10px 22px 10px 8px;
+  position: relative;
+  height: 65px;
+}
+
+.sidebar-handler {
+  background-color: #ffffff;
+  position: absolute;
+  left: -20px;
+  width: 40px;
+  height: 40px;
+  border-radius: 51px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sidebar-close {
+  display: none;
+}
+.sidebar-logo {
+  width: 80%;
+  margin: auto;
+  height: 100%;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}
+
+.sidebar-body {
+  height: calc(100% - 120px);
+  position: relative;
+
+  .parent-sidebar-options {
+    list-style: none;
+    padding: 0px !important;
+    margin: 0px !important;
+    transition: all 0.3s ease-in;
+    height: calc(100% - 0px) !important;
+    overflow-x: hidden;
+    overflow-y: auto;
+    color: $sidebarTextColor;
+    // Scroll on hover
+    mask-image: linear-gradient(to top, transparent, black),
+      linear-gradient(to left, transparent 7px, black 7px);
+    mask-size: 100% 20000px;
+    mask-position: left bottom;
+    -webkit-mask-image: linear-gradient(to top, transparent, black),
+      linear-gradient(to left, transparent 7px, black 7px);
+    -webkit-mask-size: 100% 20000px;
+    -webkit-mask-position: left bottom;
+    transition: mask-position 0.3s, -webkit-mask-position 0.3s;
+
+    &:hover {
+      -webkit-mask-position: left top;
+    }
+
+    @keyframes background {
+      from {
+        background: pink;
+      }
+
+      to {
+        background: #c0d6ff;
+      }
+    }
+
+    & > li {
+      span {
+        padding-left: 20px;
+        white-space: nowrap;
+      }
+    }
+
+    .parent-sidebar-option {
+      width: 100%;
+      min-height: 46px !important;
+      // border-radius: 6px;
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+      cursor: pointer;
+      transition: all 0.3s ease-in;
+
+      &.isParentActive {
+        min-height: 300px;
+        transition: all 0.3s ease-in;
+      }
+
+      .parent-sidebar-content {
+        font-size: 16px;
+        font-weight: 400;
+        // text-transform: uppercase;
+        padding: 15px 10px;
+        transition: all 0.3s ease-in;
+
+        &:hover {
+          color: $whiteColor;
+          background-color: $lighPrimaryColor;
+          // background-color: $darkBlueColor;
+        }
+      }
+
+      &.active {
+        background-color: $lighPrimaryColor;
+        // background-color: $darkBlueColor;
+        border-left: solid 4px #736cc7;
+        color: $whiteColor;
+      }
+
+      &.solo-active {
+        background-color: transparent;
+        color: $whiteColor;
+      }
+
+      .sidebar-icon {
+        width: 35px;
+        margin-right: 8px;
+        text-align: center;
+      }
+
+      .sidebar-tail-icon {
+        width: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transform: rotate(90deg);
+        // transition-delay: 0.5;
+        transition: all 0.3s ease-out;
+
+        &.active {
+          transform: rotate(0deg);
+        }
+      }
+    }
+  }
+
+  .child-sidebar-options {
+    list-style: none;
+    padding: 0px !important;
+    margin: 0px 6px !important;
+    width: 100%;
+    transition: all 0.3s ease-in;
+
+    .child-sidebar-option {
+      width: 100%;
+      min-height: 46px;
+      // border-radius: 6px;
+      display: flex;
+      align-items: center;
+      color: $sidebarTextColor;
+      // justify-content: center;
+      font-size: 16px;
+      font-weight: 400;
+      // text-transform: uppercase;
+      padding: 15px 0px;
+      padding-left: 6px;
+      transition: all 0.3s ease-in;
+      transition-duration: 300ms;
+      cursor: pointer;
+
+      &.active {
+        // background-color: $primaryColor;
+        color: $whiteColor;
+      }
+
+      .sidebar-icon {
+        width: 35px;
+        margin-right: 8px;
+        text-align: center;
+      }
+
+      &:hover {
+        color: $whiteColor;
+        background-color: $lighPrimaryColor;
+        // background-color: $darkBlueColor;
+      }
+
+      // &:last-child{
+      //     margin-bottom: 10px;
+      // }
+    }
+  }
+}
+
+.sidebar-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40px;
+  background-color: $lighPrimaryColor;
+  position: relative;
+  color: $whiteColor;
+  font-size: 13px;
+}
+
+/* --------------- @Header Area ---------------- */
+
+.dashboard-header {
+  width: calc(100vw - 270px);
+  background-color: $whiteColor;
+  border-radius: 0px;
+  padding: 10px 20px;
+  // margin-bottom: 10px;
+  box-shadow: 0px 8px 8px rgba(149, 157, 165, 0.1);
+  position: relative;
+}
+
+.header-right-action {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-section {
+  margin-left: 10px;
+
+  .profile-img {
+    width: 45px;
+    height: 45px;
+    position: relative;
+
+    .userActive {
+      position: absolute;
+      width: 12px;
+      height: 12px;
+      border-radius: 50px;
+      bottom: 2px;
+      right: 0px;
+      background-color: $lightGreenColor;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50px;
+    }
+  }
+
+  .user-detail {
+    margin-left: 14px;
+
+    label {
+      font-size: 18px;
+      font-weight: 500;
+      color: $darkTextColor;
+    }
+
+    span {
+      font-size: 14px;
+      font-weight: 400;
+      color: $lightTextColor;
+    }
+
+    .userType {
+      border-radius: 4px;
+      padding: 7px 14px;
+      background-color: $lightYellowColor;
+      font-size: 15px;
+      font-weight: 400;
+    }
+  }
+}
+
+/* --------------- @Component common Area ---------------- */
+
+.userType {
+  margin-top: 5px;
+  width: 100%;
+  font-size: 12px;
+  color: $lightTextColor;
+  border-radius: 4px;
+  padding: 2px 14px;
+  background-color: $lightYellowColor;
+  font-weight: 400;
+  border-radius: 25px;
+}
+
+.project-btn {
+  width: 100%;
+  font-size: 14px;
+  color: $lightTextColor;
+  border-radius: 4px;
+  padding: 7px 14px;
+  background-color: $lightYellowColor;
+  font-weight: 400;
+  cursor: pointer;
+  text-align: center;
+}
+
+.dashboard-body {
+  width: calc(100vw - 300px);
+  background-color: $whiteColor;
+  border-radius: 10px;
+  padding: 2px;
+  margin: 15px;
+  box-shadow: 0px 8px 24px rgba(149, 157, 165, 0.2);
+  // height: calc(100vh - 95px);
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 10px;
+
+  .card-title {
+    font-size: 20px;
+    margin-top: -22px;
+    font-weight: 500;
+    margin-left: 10px;
+    color: $lightTextColor;
+  }
+
+  .card-actions {
+    display: flex;
+    align-items: center;
+
+    .btn-icon-action {
+      margin-left: 8px;
+    }
+  }
+}
+
+.card-body {
+  padding: 10px;
+}
+@media screen and (max-width: 768px) {
+  .card-body {
+    margin-top: -20px
+  }
+}
+
+.profile-img-popup {
+  width: 60px;
+  height: 60px;
+
+  img {
+    border-radius: 50px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.dashboard-box .custom-table.p-datatable .p-datatable-wrapper {
+  height: auto !important;
+  min-height: auto !important;
+}
+.dashboard-lable h3 {
+  margin: 0;
+  padding: 0 10px;
+}

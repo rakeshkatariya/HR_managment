@@ -1,0 +1,41 @@
+
+@media only screen and (max-width: 767px) {
+      
+      
+    .p-sidebar{
+        width: 100% !important;
+    }
+
+        .dashboard-body {
+            .card-header {
+                display: unset;
+                padding: 0px;
+    
+                .card-title {
+                    .searchbar-area {
+                        input {
+                            max-width: none;
+                            margin-bottom: 10px;
+                            width: 100%;
+                            margin-top: -8px;
+                        }
+                    }
+                  
+                }
+                .btn-icon-text-action{
+                    width: 100%;
+                }
+    
+                .card-actions {
+                    justify-content: flex-end;
+                }
+            }
+    
+            .card-body {
+                padding: 10px 0px;
+                margin-top: 5px;
+            }
+        }
+
+        
+}

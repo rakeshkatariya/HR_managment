@@ -1,0 +1,44 @@
+.available-group-area{
+    background-color: $grayishBlueColor;
+    padding: 15px;
+    border-radius: 8px;
+    .available-group-header{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .avilable-area-title{
+            font-size: 16px;
+            font-weight: 500;
+            color: $grayColor;
+        }
+    }
+    .available-group-body{
+        margin-top: 20px;
+    }
+}
+
+.selected-group-area{
+    margin-top: 15px;
+    .selected-group{
+        background-color: $grayishBlueColor;
+        padding: 10px;
+        border-radius: 8px;
+    }
+}
+
+.assigned-view-area{
+    border: 1px solid $lightGrayColor;
+    border-radius: 15px;
+    padding: 10px;
+    ol{
+        margin: 0px;
+        padding-left: 25px;
+        li{
+            padding: 10px 0px;
+            border-bottom: 1px solid $lightGrayColor;
+            &:last-child{
+                border-bottom: none !important;
+            }
+        }
+    }
+}

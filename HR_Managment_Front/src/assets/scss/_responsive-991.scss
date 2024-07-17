@@ -1,0 +1,95 @@
+@media (max-width: 991px) {
+  .sidebar-container {
+    position: fixed;
+    width: 0px;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    transition: 0.5s;
+    
+    &.sidebar-mini {
+      width: 270px;
+      &:hover {
+        & + .large-dashboard-area {
+          width: 100% !important;
+
+          .dashboard-header {
+            width: 100% !important;
+          }
+
+          .dashboard-body {
+            width: calc(100% - 30px) !important;
+          }
+        }
+      }
+    }
+  }
+
+  .dashboard-right-side {
+    width: 100%;
+    .dashboard-header {
+      width: 100%;
+      position: relative;
+    }
+
+    .dashboard-body {
+      width: calc(100% - 30px);
+      margin-top: 2px;
+
+    }
+  }
+
+  .dashboard-right-side.large-dashboard-area {
+    .dashboard-header {
+      width: 100%;
+    }
+
+    .dashboard-body {
+      width: calc(100% - 30px);
+    }
+  }
+
+  .dashboard-header {
+    padding-left: 55px;
+  }
+
+  .sidebar-handler {
+    left: 15px;
+  }
+  .sidebar-mini {
+    .sidebar-close {
+      background-color: #ffffff;
+      position: absolute;
+      top: 8px;
+      right: -25px;
+      width: 50px;
+      height: 50px;
+      border-radius: 51px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 7px;
+      z-index: 9;
+    }
+  }
+
+  .custom-table.p-datatable .p-datatable-wrapper {
+    height: auto !important;
+    min-height: calc(100vh - 237px) !important;
+  }
+
+  .auth-background {
+    .main-img {
+      display: none;
+    }
+  }
+
+  .dialog-popup,
+  .dialog-popup1 {
+    width: 90vw;
+  }
+  .card-title .searchbar-area input {
+    max-width: 100% !important;
+  }
+}

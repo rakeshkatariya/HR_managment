@@ -1,0 +1,1253 @@
+// Css for input field
+
+.field {
+  .p-inputtext {
+    font-family: "Rubik", sans-serif;
+    height: 37px;
+    border: none;
+    border-bottom: 1px solid $inputBorderColor;
+    border-radius: 0;
+    // padding: 0.45rem 0.05rem !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+
+    input {
+      font-family: "Rubik", sans-serif;
+    }
+
+    &::placeholder {
+      color: #979797;
+      font-weight: 300;
+      font-size: 14px;
+    }
+  }
+
+  label {
+    color: $labelColor !important;
+    font-size: 13px;
+    font-weight: 400;
+    // left: 0px !important;
+  }
+
+  input:-webkit-autofill~label {
+    top: -12px !important;
+  }
+
+  .p-inputtextarea {
+    border: none;
+    border-bottom: 1px solid $inputBorderColor;
+    border-radius: 0;
+    // padding: 0.45rem 0.05rem !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+    width: 100%;
+    height: auto !important;
+    overflow: auto !important;
+  }
+}
+
+.floating-field {
+  position: relative;
+  margin-top: 10px;
+
+  &.multiple-field {
+    label {
+      top: -11px;
+      font-size: 12px;
+      color: $labelColor;
+      left: 0px;
+    }
+  }
+
+  input,
+  textarea {
+    font-size: 16px;
+    border-radius: 0px;
+    border: none;
+    border-bottom: 1px solid $inputBorderColor;
+    font-family: "Rubik", sans-serif;
+    padding: 10px 0px 8px;
+    width: 100% !important;
+
+    &:hover {
+      border-color: $inputBorderColor !important;
+    }
+
+    &.p-invalid {
+      &:hover {
+        border-color: #e24c4c !important;
+      }
+    }
+  }
+
+  input:focus,
+  textarea:focus {
+    outline: none;
+  }
+
+  label {
+    color: $labelColor;
+    font-size: 15px;
+    font-weight: normal;
+    position: absolute;
+    pointer-events: none;
+    font-weight: 400;
+    font-family: "Rubik", sans-serif;
+    left: 0px;
+    top: 10px;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+  }
+
+  input:focus~label,
+  input:not(:placeholder-shown)~label {
+    top: -11px;
+    font-size: 12px;
+    color: $labelColor;
+    left: 0px;
+  }
+
+  textarea:focus~label,
+  textarea:not(:placeholder-shown)~label {
+    top: -11px;
+    font-size: 12px;
+    color: $labelColor;
+    left: 0px;
+  }
+
+  .bar {
+    position: relative;
+    display: block;
+    width: 100%;
+  }
+
+  .bar:before,
+  .bar:after {
+    content: "";
+    height: 2px;
+    width: 0;
+    bottom: 0px;
+    position: absolute;
+    background-color: $lightPurpleColor;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+  }
+
+  .bar:before {
+    left: 50%;
+  }
+
+  .bar:after {
+    right: 50%;
+  }
+
+  input:focus~.bar:before,
+  input:focus~.bar:after {
+    width: 50%;
+  }
+
+  textarea:focus~.bar:before,
+  textarea:focus~.bar:after {
+    width: 50%;
+    top: -6px;
+  }
+
+  /* animations */
+  @-webkit-keyframes inputHighlighter {
+    from {
+      background: #4285f4;
+    }
+
+    to {
+      width: 0;
+      background: transparent;
+    }
+  }
+
+  @-moz-keyframes inputHighlighter {
+    from {
+      background: #4285f4;
+    }
+
+    to {
+      width: 0;
+      background: transparent;
+    }
+  }
+
+  @keyframes inputHighlighter {
+    from {
+      background: #4285f4;
+    }
+
+    to {
+      width: 0;
+      background: transparent;
+    }
+  }
+}
+
+.p-float-label {
+  label {
+    // border: none;
+    left: 0px !important;
+    border-bottom: none !important;
+    display: flex;
+    align-items: center;
+    color: $labelColor;
+    font-size: 15px;
+    font-weight: 400;
+    font-family: "Rubik", sans-serif;
+    top: 62% !important;
+  }
+
+  .p-dropdown {
+    border: none;
+    border-bottom: 1px solid $inputBorderColor;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    margin-top: 10px;
+    height: 38px;
+
+    &.p-inputwrapper-focus~label,
+    &.p-inputwrapper-filled~label {
+      top: 8px !important;
+      font-size: 12px;
+      color: $labelColor;
+      left: 0px;
+    }
+
+    .p-dropdown-label {
+      padding: 8px 0px;
+      line-height: 21px;
+      font-size: 16px;
+      font-family: "Rubik", sans-serif;
+    }
+
+    .p-placeholder {
+      color: #979797;
+      font-weight: 300;
+      font-size: 14px;
+    }
+
+    .p-dropdown-trigger-icon {
+      color: #979797;
+      font-size: 13px;
+    }
+  }
+
+  .bar {
+    position: relative;
+    display: block;
+    width: 100%;
+  }
+
+  .bar:before,
+  .bar:after {
+    content: "";
+    height: 2px;
+    width: 0;
+    bottom: 0px;
+    position: absolute;
+    background-color: $lightPurpleColor;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+  }
+
+  .bar:before {
+    left: 50%;
+  }
+
+  .bar:after {
+    right: 50%;
+  }
+
+  .p-inputwrapper-focus~.bar:before,
+  .p-inputwrapper-focus~.bar:after {
+    width: 50%;
+  }
+
+  // .p-inputwrapper-filled ~ .bar:before,
+  // .p-inputwrapper-filled ~ .bar:after {
+  //     width: 50%;
+  // }
+
+  /* animations */
+  @-webkit-keyframes inputHighlighter {
+    from {
+      background: #4285f4;
+    }
+
+    to {
+      width: 0;
+      background: transparent;
+    }
+  }
+
+  @-moz-keyframes inputHighlighter {
+    from {
+      background: #4285f4;
+    }
+
+    to {
+      width: 0;
+      background: transparent;
+    }
+  }
+
+  @keyframes inputHighlighter {
+    from {
+      background: #4285f4;
+    }
+
+    to {
+      width: 0;
+      background: transparent;
+    }
+  }
+}
+
+.floating-field.calendar {
+  .p-calendar {
+    width: 100%;
+
+  input:focus label,
+  input:not(:placeholder-shown) label {
+    top: -11px;
+    font-size: 12px;
+    color: $labelColor;
+    left: 0px;
+  }
+}
+
+}
+
+.custom-inputs {
+  text-align: left;
+  width: 100%;
+
+  .p-inputtext {
+    margin-top: 6px;
+    box-shadow: none !important;
+    height: 42px;
+    font-family: "Rubik" !important;
+  }
+
+  i {
+    margin-top: 0 !important;
+    top: 56% !important;
+  }
+
+  &.password-field {
+    position: relative;
+
+    .tailer-icon {
+      position: absolute;
+      right: 15px;
+      top: 51% !important;
+      font-size: 24px;
+      cursor: pointer;
+    }
+  }
+}
+
+.field-relation-icon {
+  height: 38px;
+  display: flex;
+  align-items: center;
+}
+
+.error-msg {
+  .field-validation-error {
+    float: left;
+    margin-top: 5px;
+    color: #ff3d3c;
+  }
+}
+
+// Css for check box
+
+.field {
+  .field-checkbox {
+    height: 37px;
+    display: flex;
+    align-items: center;
+  }
+}
+
+.field-checkbox {
+  display: flex;
+
+  .p-checkbox {
+    .p-checkbox-box {
+      width: 20px;
+      height: 20px;
+      border-radius: 4px;
+      border: 2px solid $lightGrayColor;
+    }
+  }
+
+  label {
+    margin-left: 8px;
+    color: $grayColor;
+  }
+}
+
+// Css for Button
+
+.btn-main {
+  border: 1px solid $primaryColor !important;
+  background-color: $primaryColor !important;
+
+  .p-button-label {
+    font-size: 20px;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+
+  &:hover {
+    background-color: #010e20 !important;
+  }
+}
+
+.text-link {
+  color: $linkColor;
+  font-weight: 500;
+  font-size: 14px;
+  cursor: pointer;
+
+  i {
+    vertical-align: middle !important;
+  }
+
+  span {
+    margin-right: 15px;
+  }
+}
+
+.btn-icon-action {
+  width: 35px;
+  height: 35px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: none;
+  border: none;
+  outline: none;
+  background-color: $lightBtnColor;
+  color: $primaryColor;
+  font-size: 16px;
+
+  &:hover {
+    background-color: $lightGrayColor;
+  }
+
+  &:active {
+    color: $whiteColor;
+    background-color: $primaryColor;
+  }
+}
+
+.btn-icon-text-action {
+  height: 35px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: none;
+  border: none;
+  outline: none;
+  background-color: $lightBtnColor;
+  color: $primaryColor;
+  font-size: 15px;
+  padding: 0 10px;
+  white-space: nowrap;
+
+  i {
+    margin-right: 8px;
+    font-size: 17px;
+  }
+
+  &:hover {
+    background-color: $lightGrayColor;
+  }
+
+  &:active {
+    color: $whiteColor;
+    background-color: $primaryColor;
+  }
+}
+
+.btn-icon-none {
+  width: 35px;
+  height: 35px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: none;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: $iconColor;
+  font-size: 18px;
+  position: relative;
+
+  .icon-notification,
+  .icon-dark-theme {
+    font-size: 20px;
+  }
+}
+
+.btn-text-action-primary {
+  height: 35px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: none;
+  border: none;
+  outline: none;
+  background-color: $iconColor;
+  padding: 0 16px;
+  color: $whiteColor;
+  font-size: 14px;
+  text-transform: uppercase;
+  white-space: nowrap;
+
+  &:hover {
+    background-color: $primaryColor;
+  }
+}
+
+.btn-text-action-secondary {
+  padding: 0 10px;
+  height: 35px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: none;
+  border: none;
+  outline: none;
+  border: 1px solid $iconColor;
+  background-color: $whiteColor;
+  color: $iconColor;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.btn-dialog-cancel {
+  padding: 0 10px;
+  height: 35px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: none;
+  border: none;
+  outline: none;
+  border: 1px solid $iconColor;
+  background-color: $whiteColor;
+  color: $lightTextColor;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.btn-dialog-delete {
+  padding: 0 10px;
+  height: 35px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: none;
+  border: none;
+  outline: none;
+  background-color: $dangerColor;
+  color: $whiteColor;
+  font-size: 14px;
+  text-transform: uppercase;
+
+  &:hover {
+    background-color: #eb3130;
+  }
+}
+
+.btn-icon-white {
+  width: 35px;
+  height: 35px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: none;
+  border: none;
+  outline: none;
+  background-color: $whiteColor;
+  color: $dangerColor;
+  font-size: 20px;
+}
+
+.btn-table-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: none;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: $iconColor;
+  font-size: 18px;
+  cursor: pointer;
+
+  &:active {
+    background-color: $primaryColor !important;
+    color: $whiteColor;
+  }
+
+  .icon-view {
+    font-size: 22px;
+  }
+}
+
+.btn-secondary {
+  background-color: $secondaryColor;
+  border-radius: 25px;
+  box-shadow: none;
+  border: none;
+  outline: none;
+  padding: 10px 40px;
+  font-size: 16px;
+
+  &:hover {
+    background-color: #9494db;
+  }
+}
+
+// Css for toasts
+
+.toast-container {
+  position: fixed;
+  bottom: 10px;
+  left: 15px;
+  z-index: 25000;
+
+  .custom-toast {
+    width: 350px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 14px 3px rgba(100, 100, 111, 0.1);
+    animation: myfirst 0.5s;
+    position: absolute;
+    left: 0;
+    bottom: 10px;
+
+    @keyframes myfirst {
+      0% {
+        left: -30px;
+        bottom: 10px;
+      }
+
+      100% {
+        left: 0;
+        bottom: 10px;
+      }
+    }
+
+    label {
+      font-weight: 500;
+      font-size: 15px;
+    }
+
+    span {
+      font-weight: 400;
+      font-size: 15px;
+      margin-top: 6px;
+    }
+
+    .success-toast-progress {
+      height: 8px;
+      border-radius: 6px 6px 0 0;
+
+      .p-progressbar-value {
+        height: 8px;
+        background: $successDarkColor;
+        border-radius: 6px 6px 0 0;
+      }
+
+      .p-progressbar-label {
+        display: none;
+      }
+    }
+
+    .error-toast-progress {
+      height: 8px;
+      border-radius: 6px 6px 0 0;
+
+      .p-progressbar-value {
+        height: 8px;
+        background: $errorDarkColor;
+        border-radius: 6px 6px 0 0;
+      }
+
+      .p-progressbar-label {
+        display: none;
+      }
+    }
+
+    .warning-toast-progress {
+      height: 8px;
+      border-radius: 6px 6px 0 0;
+
+      .p-progressbar-value {
+        height: 8px;
+        background: $warningDarkColor;
+        border-radius: 6px 6px 0 0;
+      }
+
+      .p-progressbar-label {
+        display: none;
+      }
+    }
+
+    .info-toast-progress {
+      height: 8px;
+      border-radius: 6px 6px 0 0;
+
+      .p-progressbar-value {
+        height: 8px;
+        background: $infoDarkColor;
+        border-radius: 6px 6px 0 0;
+      }
+
+      .p-progressbar-label {
+        display: none;
+      }
+    }
+
+    &.success-msg {
+      background-color: $successLightColor;
+      color: $successDarkColor;
+    }
+
+    &.error-msg {
+      background-color: $errorLightColor;
+      color: $errorDarkColor;
+    }
+
+    &.warning-msg {
+      background-color: $warningLightColor;
+      color: $warningDarkColor;
+    }
+
+    &.info-msg {
+      background-color: $infoLightColor;
+      color: $infoDarkColor;
+    }
+  }
+}
+
+// Css for table
+
+.custom-table {
+  &.p-datatable {
+    .p-datatable-wrapper {
+      border: 1px solid $tableHeaderColor;
+      border-radius: 8px;
+      height: calc(100vh - 203px) !important; //hemil
+
+      table {
+        .p-datatable-thead {
+          background-color: $tableHeaderColor !important;
+
+          tr {
+            height: 40px !important;
+
+            th {
+              border: none;
+              background: transparent !important;
+              padding: 16px 10px !important;
+              white-space: nowrap;
+              .p-column-title {
+                color: $grayColor;
+                font-weight: 400;
+                font-size: 14px;
+              }
+
+              .p-sortable-column-icon {
+                font-size: 10px;
+                color: $grayColor;
+                font-weight: 400;
+              }
+            }
+          }
+        }
+
+        .p-datatable-tbody {
+          tr {
+            height: 40px;
+
+            td {
+              border: 1px solid $tableHeaderColor;
+              border-width: 0 0 1px 0;
+              font-weight: 400;
+              font-size: 14px;
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              padding: 16px 10px !important;
+            }
+
+            &:hover {
+              background-color: $lightOceanColor !important;
+            }
+
+            .table-icon {
+              display: flex;
+              align-items: center;
+              justify-content: flex-start;
+
+              button {
+                width: 32px;
+                height: 32px;
+                border-radius: 4px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                box-shadow: none;
+                border: none;
+                outline: none;
+                color: $iconColor;
+                font-size: 18px;
+                margin-right: 8px;
+                background-color: transparent !important;
+
+                // &:hover{
+                //     background-color: $lightGrayColor !important;
+                // }
+                &:active {
+                  background-color: $primaryColor !important;
+                  color: $whiteColor;
+                }
+
+                .icon-view {
+                  font-size: 22px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .p-paginator {
+    padding: 0;
+    border-bottom: none !important;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 7px;
+
+    button {
+      width: 35px !important;
+      height: 35px !important;
+      min-width: auto;
+      min-height: auto;
+    }
+
+    .p-paginator-current {
+      height: auto !important;
+      padding: 0 !important;
+      margin: 0 !important;
+      order: -1 !important;
+      font-size: 14px;
+      font-weight: 400;
+    }
+
+    .p-paginator-page {
+      width: 35px;
+      height: 35px;
+      min-width: auto !important;
+      border-radius: 4px;
+      color: $lightTextColor;
+      background-color: $tableHeaderColor !important;
+    }
+
+    .p-dropdown {
+      height: 35px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: none !important;
+      background-color: $lightBtnColor;
+      padding-right: 6px;
+      margin-right: auto;
+      order: -1 !important;
+
+      .p-dropdown-label {
+        padding: 0 5px !important;
+        font-size: 16px;
+      }
+
+      .p-dropdown-trigger {
+        width: 16px;
+
+        .p-dropdown-trigger-icon {
+          line-height: 0.8;
+          font-size: 14px;
+          padding-top: 4px;
+        }
+      }
+    }
+  }
+}
+
+// Css for side bar panel
+.sidebar-70 {
+  width: 70% !important;
+}
+
+.sidebar-40 {
+  width: 40% !important;
+}
+
+.sidebar-30 {
+  width: 30% !important;
+}
+
+.sidebar-40 {
+  width: 40% !important;
+}
+
+.sidebar-50 {
+  width: 50% !important;
+}
+
+.p-sidebar-header {
+  padding: 0 !important;
+}
+
+.p-sidebar-content {
+  padding: 0 !important;
+}
+
+.smodal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 15px;
+  border-bottom: 1px solid $tableHeaderColor;
+
+  .smoal-title {
+    label {
+      font-size: 18px;
+      font-weight: 500;
+      color: $lightTextColor;
+    }
+  }
+
+  .btn-icon-modal {
+    width: 35px;
+    height: 35px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: none;
+    border: none;
+    outline: none;
+    background-color: $lightBtnColor;
+    color: $primaryColor;
+    font-size: 16px;
+
+    &:hover {
+      background-color: $lightGrayColor;
+    }
+
+    &:active {
+      color: $whiteColor;
+      background-color: $primaryColor;
+    }
+  }
+}
+
+.smodal-body {
+  height: calc(100vh - 109px);
+  overflow: auto;
+  padding: 15px;
+}
+
+.smodal-footer {
+  position: absolute;
+  bottom: 0;
+  padding: 11px 15px;
+  width: 100%;
+  box-shadow: 0 7px 29px 0 rgba(100, 100, 111, 0.2);
+
+  .smodal-actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    .btn-text-action-primary {
+      margin-left: 8px;
+    }
+  }
+}
+
+// Css for dialog-popup
+.dialog-popup {
+  border-radius: 12px;
+  overflow: auto;
+  width: 33vw;
+
+  @media only screen and (max-width: 576px) {
+    width: 90vw;
+  }
+  
+
+  .p-dialog-header {
+    padding: 1.4rem;
+
+    .p-dialog-title {
+      font-size: 18px;
+      font-weight: 500;
+      color: $lightTextColor;
+    }
+  }
+
+  .p-dialog-content {
+    padding: 0 1.4rem 1.4rem !important;
+
+    span {
+      font-weight: 400;
+      color: $lightTextColor;
+
+      b {
+        font-weight: 500;
+      }
+    }
+  }
+
+  .dialog-footer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 2rem;
+
+    .btn-dialog-delete,
+    .btn-dialog-submit {
+      margin-left: 8px;
+      margin-right: 8px;
+    }
+  }
+}
+
+// Css for switch widget
+.custom-switch {
+  &.p-inputswitch {
+    width: 3rem !important;
+    height: 1.4rem !important;
+
+    .p-inputswitch-slider {
+      &::before {
+        width: 0.9rem;
+        height: 0.9rem;
+        margin-top: -0.46rem;
+      }
+    }
+
+    &.p-inputswitch-checked {
+      .p-inputswitch-slider {
+        &::before {
+          left: 0.47rem;
+        }
+      }
+    }
+  }
+}
+
+// Css for check box
+
+.p-checkbox-box {
+  border: 1px solid $primaryColor !important;
+  border-radius: 5px !important;
+  box-shadow: none !important;
+  // background: transparent !important;
+
+  &.p-highlight {
+    background-color: $primaryColor !important;
+  }
+}
+
+// Css for dropdown
+.custom-dropdown {
+  &.p-dropdown {
+    border: none !important;
+    width: 100%;
+    box-shadow: none !important;
+
+    .p-dropdown-trigger {
+      border-bottom: 1px solid #d5d5d5;
+      border-radius: 0 !important;
+      width: 2rem;
+    }
+  }
+}
+
+// Csss for popover
+.profile-menu {
+  width: auto !important;
+  padding: 15px 10px !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+  .p-overlaypanel-content {
+    padding: 0 !important;
+  }
+
+  .user-name {
+    color: $darkTextColor;
+    font-size: 17px;
+    font-weight: 500;
+  }
+
+  .email-address {
+    color: $grayColor;
+    font-size: 14px;
+    font-weight: 400;
+  }
+
+  hr {
+    border: 1px solid $tableHeaderColor;
+  }
+
+  .menu-options {
+    list-style: none;
+    margin: 0 !important;
+    padding: 0 !important;
+
+    .menu-link {
+      width: 100%;
+      height: 40px;
+      border-radius: 4px;
+      margin-bottom: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 0 10px;
+      cursor: pointer;
+
+      i {
+        font-size: 22px;
+        width: 30px;
+        margin-right: 4px;
+      }
+
+      .list-dot {
+        width: 12px;
+        height: 12px;
+        border-radius: 50px;
+        background-color: $darkOceanColor;
+        margin-left: auto;
+        display: none;
+      }
+
+      &:hover {
+        background-color: $grayishBlueColor;
+
+        .list-dot {
+          display: block;
+        }
+      }
+    }
+  }
+
+  .last-login-info {
+    color: $lightTextColor;
+    font-size: 14px;
+  }
+}
+
+// Css for input slider
+
+.slider-input-field {
+  height: 37px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+
+  .p-slider {
+    width: 100%;
+  }
+}
+
+//Css for card
+
+.custom-card {
+  .card-header {
+    background-color: $lightBtnColor;
+    border-radius: 4px 4px 0px 0px;
+    height: 45px;
+    padding: 8px;
+  }
+
+  .card-body {
+    border: 2px solid $lightBtnColor;
+    border-top: 0px;
+    border-radius: 0px 0px 4px;
+    height: calc(100vh - 164px);
+  }
+}
+
+.badge {
+  &.badge-custom {
+    background-color: #f3f3f3;
+    border-radius: 50px;
+    padding: 8px 10px;
+    padding: 5px 13px;
+    font-size: 15px;
+  }
+}
+
+.badge-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50px;
+  background-color: $darkOceanColor;
+  margin-right: 8px;
+}
+
+//Css tab button group
+.btn-group-tab {
+  .p-tabview-nav-container {
+    display: none !important;
+  }
+
+  .p-tabview-panels {
+    padding: 0px !important;
+    padding-top: 1px !important;
+  }
+}
+
+//Inner card content
+
+.inner-card-header {
+  span {
+    color: $labelColor;
+    font-size: 14px;
+  }
+}
+
+.card-inner-border {
+  border-top: 1px solid #f8f7fc;
+}

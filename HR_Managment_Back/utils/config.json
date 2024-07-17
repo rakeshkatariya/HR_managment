@@ -1,0 +1,14 @@
+{   "linkOrigin": "http://localhost:3000",
+    "secret": "EquatorTreemaIndia2022",
+    "emailFrom": "davkodi5@gmail.com",
+    "smtpOptions": {
+        "host": "smtp.gmail.com",
+        "port": 587,
+        "auth": {
+            "user": "davkodi5@gmail.com",
+            "pass": "ncaqrrgrowppkcsx"
+        }
+    }
+}
+
+
